@@ -412,6 +412,9 @@ function moveToPaymentForm(o) {
 								.attr("value", fields[k]);
 			form.append(input);
 		}
+		
+		form.hide();
+		form.appendTo($("body"));
 		form.submit();
 	}
 }

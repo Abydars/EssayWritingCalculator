@@ -10,6 +10,7 @@ function render_ew_calculator() {
 	//wp_enqueue_script( 'steps', plugins_url( '/assets/js/steps.js' , __FILE__ ), array( 'jquery' ) );
 	//wp_enqueue_script( 'validator', plugins_url( '/assets/js/validator.js' , __FILE__ ), array( 'jquery' ) );
 	wp_enqueue_script( 'prices', plugins_url( '/assets/js/prices.js' , __FILE__ ), array( 'jquery' ) );
+	wp_enqueue_script( 'bootstrap', plugins_url( '/assets/bootstrap/js/bootstrap.min.js' , __FILE__ ), array( 'jquery' ) );
 	wp_enqueue_script( 'fileinput-canvas-blob', plugins_url( '/assets/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js' , __FILE__ ), array( 'jquery' ) );
 	wp_enqueue_script( 'fileinput-sortable', plugins_url( '/assets/bootstrap-fileinput/js/plugins/sortable.min.js' , __FILE__ ), array( 'jquery' ) );
 	wp_enqueue_script( 'fileinput-purify', plugins_url( '/assets/bootstrap-fileinput/js/plugins/purify.min.js' , __FILE__ ), array( 'jquery' ) );
@@ -19,6 +20,7 @@ function render_ew_calculator() {
 	
 	// INCLUDE STYLES
 	wp_enqueue_style( 'styles', plugins_url( '/assets/css/styles.css' , __FILE__ ) );
+	wp_enqueue_style( 'bootstrap', plugins_url( '/assets/bootstrap/css/bootstrap.min.css' , __FILE__ ) );
 	wp_enqueue_style( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/css/fileinput.min.css' , __FILE__ ) );
 	//wp_enqueue_style( 'form-styles', plugins_url( '/assets/css/form-styles.css' , __FILE__ ) );
 	//wp_enqueue_style( 'template-styles', plugins_url( '/assets/css/template-styles.css' , __FILE__ ) );
