@@ -1,0 +1,214 @@
+#allsteps {
+    margin-bottom: 20px;
+    float: left;
+    width: 55%;
+}
+#allsteps > div > div,.stepbuttons .prev,.stepbuttons .next,.stepbuttons .submit {
+	float:left;
+	margin-right:10px;
+	background:#787878;
+	padding: 8px 17px;
+	color:#2f2f2f;
+	font-size: 17px;
+}
+.stepbuttons a.prev, .stepbuttons a.next, .stepbuttons a.submit {
+    color: #fff !important;
+    text-decoration: none;
+}
+.stepbuttons .next,.stepbuttons .submit {
+    background: #3c66bd;
+    float: right;
+    margin-right: 0px;
+}
+#calculatorcont > .main a, #calculatorcont > .main h4 {
+    color: #3c66bd;
+}
+#allsteps > div > div {
+    background: #bbb;
+    padding: 10px 10px 10px;
+}
+#allsteps > div > div.active {
+    background: #3c66bd;
+}
+#allsteps > div > div h3 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 16px;
+    color: #FFF;
+}
+#allsteps > div > div.active .more {
+    color: #fff;
+}
+#allsteps .stepsvisual span {
+    display: inline-block !important;
+    margin-left: 5px;
+}
+.stepsvisual .active span {
+    display: inline;
+}
+#allsteps .completed, #allsteps .next {
+    cursor: pointer;
+}
+#orderinfo {
+    float: right;
+}
+.price-container .was {
+	color: red;
+}
+#calculatorcont #orderinfo > div {
+    font-size: 15px;
+}
+.strike, .was {
+    text-decoration: line-through;
+}
+#steps {
+    clear: both;
+    position: relative;
+    z-index: 100;
+}
+#calccont .step {
+    margin-bottom: 20px;
+    min-height: 170px;
+}
+.step > .title {
+    display: none;
+}
+.section {
+    padding: 0px 5% 20px;
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.section .sub {
+    background: #ddd;
+    color: #333;
+    margin: 0 -5.7%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+#calc > div {
+    width: 50%;
+    margin-bottom: 20px;
+    float: left;
+}
+#calc > div {
+    /* margin: 0; */
+}
+#calc > div > div {
+    margin-bottom: 15px;
+}
+#calc > div span {
+    width: 35%;
+    text-align: right;
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 13px;
+    vertical-align: middle;
+}
+#calc > div select {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+textarea.required.invalid {
+	box-shadow: 0px 0px 3px #ffa3a3;
+	border-color: #F00 !important;
+}
+select.required.invalid {
+	box-shadow: 0px 0px 3px #ffa3a3;
+	border-color: #F00 !important;
+}
+input.required.invalid {
+	box-shadow: 0px 0px 3px #ffa3a3;
+	border-color: #F00 !important;
+}
+.formitem label {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.view-lesssteps input[type="text"],.view-lesssteps input[type="email"],.view-lesssteps select,.view-lesssteps textarea {
+	background:#fff;
+	padding:6px;
+	border: 1px solid;
+	outline: none;
+	width: 100%;
+}
+.formitem {
+	margin-bottom: 20px;
+}
+#calccont.loading {
+	position: relative;
+	float: left;
+    width: 100%;
+}
+#calccont.loading::before {
+	content: attr(data-text);
+	background: url(../img/loading_large.gif) #FFF top no-repeat;
+	position: absolute;
+	text-align: center;
+	padding-top: 80px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+}
+.calcinfo {
+    clear: both;
+    padding: 10px 20px 10px;
+    font-size: 18px;
+}
+.couponcode {
+    margin-top: 20px;
+}
+.couponcode input[type=text] {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+.couponcode input[type=button] {
+    background: #f7921b;
+    border: none;
+    padding: 7px 20px;
+    color: #FFF;
+}
+.price-container.pricecont {
+    margin-top: 10px;
+}
+.price-container.pricecont .price-amount {
+	font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+	#allsteps {
+		width: 100%;
+	}
+	#allsteps > div > div {
+		display: none;
+		width: 100%;
+	}
+	#allsteps > div > div.active {
+		display: block;
+	}
+	#orderinfo {
+		float: none;
+		width: 100%;
+		clear: both;
+		margin-bottom: 25px;
+	}
+	#calc > div {
+		width: 100%;
+	}
+	#calc > div span {
+		width: 100%;
+		text-align: left;
+	}
+	#calc > div select {
+		width: 100%;
+	}
+}

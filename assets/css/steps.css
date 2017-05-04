@@ -1,0 +1,13 @@
+.stepbuttons {
+	display:inline-block;
+	width:100%;
+}
+.stepfull > div {
+	display:block !important
+}
+.stepfull > div.disabled {
+	display:none !important;	
+}
+.stepfull .button.prev {
+	display:none !important
+}

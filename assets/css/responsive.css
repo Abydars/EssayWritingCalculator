@@ -1,0 +1,199 @@
+.main,#bottom > aside > * {
+	width:100%;
+	max-width:1160px;	
+}
+#bottom > aside > * {
+	margin:0 auto;
+	float:none;
+	overflow:hidden;	
+}
+.mobilecta {
+	display:none;	
+}
+#nav select {
+	display:none;	
+}
+#tel a {
+	color:#444;	
+}
+@media all and (max-width: 500px) {
+	body {
+		font-size:16px;
+		text-align:left;	
+	}
+	.zopim {
+		display:none !important;	
+	}
+	.quick {
+		margin:0px 5%;
+		width:86%;
+		padding:3%;	
+	}
+	.quick .formobjects {
+		float:none;
+		width:auto;	
+	}
+	.quick .formobjects input,.quick input[type="text"].message {
+		width:94%;	
+	}
+	.quick input[type="submit"] {
+		font-size:22px;
+		margin:0 !important;
+		padding:12px 9px;	
+	}
+	.frontpage-features p {
+		margin:0;	
+	}
+	.stepsvisual {
+		display:flex;	
+	}
+	small {
+		font-size:inherit;	
+	}
+	.shareaholic-share-buttons-container {
+		display:none !important;	
+	}
+}
+@media all and (max-width: 800px) {
+	.row {
+		display:block;	
+	}
+	.quick .prehtml {
+		display:none;	
+	}
+	.step_1 .discount {
+		display:none;	
+	}
+	#primary.hassidebar,#primary {
+		width:auto;
+		float:none;	
+		margin-bottom:20px;
+	}
+	#sidebar {
+		float:none;
+		width:auto;
+		margin-right:20px;
+		padding-top:20px;
+	}
+	.frontpage-features {
+		height:auto;	
+	}
+	.frontpage-features img {
+		display:none;	
+	}
+	.width33 {
+		float:none;
+		width:auto;
+		margin:0px 0px 10px;	
+	}
+	.module {
+		min-height:0px !important;	
+	}
+	img {
+		width:auto;
+		max-width:100%;
+		height:auto;	
+	}
+	#logo {
+		float:none;
+		text-align:center;
+		margin:0 10px;
+	}
+	#topright {
+		text-align:center;
+		float:none;	
+	}
+	#topright .social img {
+		width:20px;
+		height:20px;	
+	}
+	#calc > div {
+		width:auto;
+		float:none;
+		margin:0;	
+	}
+	.left2right .formitem {
+		float:none !important;
+		width:auto !important;	
+	}
+	#calc > div span {
+		width:auto !important;
+		float:none !important;
+		display:block !important;
+		margin:0 !important;
+		text-align:left !important;
+	}
+	table.equal tr,table.equal td {
+		width:auto;
+		display:block;
+	}
+	.stepsvisual h3 {
+		font-size:12px !important;
+	}
+	#calccont.step_1.view-default {
+		padding:0 !important;
+		background:none !important;	
+	}
+	.check33,.check50 {
+		float:none;
+		width:auto !important;
+		display:block;	
+	}
+	.check33 > li,.check50 > li {
+		width:auto;
+		float:none;	
+	}
+	#body > #calculatorcont {
+		display:none !important;	
+	}
+	#body > #calculatorcont.view-lesssteps {
+		display:block !important;	
+	}
+	#newsletter {
+		display:none !important;	
+	}
+	#orderinfo {
+		display:none !important;	
+	}
+	#steps .step_2 {
+		width:auto !important;	
+	}
+	.helpmessage {
+		display:none !important;	
+	}
+	#topcustom {
+		display:none;	
+	}
+	.desktoponly {
+		display:none !important;	
+	}
+	.mobilecta {
+		display:block;
+		margin-bottom:20px;
+		font-size:18px;
+		background:#7fb96f !important;
+		padding:20px;
+		text-align:center;
+	}
+	.mobilecta a {
+		color:#fff !important;
+	}
+	.js .menu-menu-container {
+		display:none;
+	}
+	.js #nav select {
+		display:block;
+		width:80%;
+		margin:10px 10%;
+		background:#444;
+		color:#fff;
+		border:1px solid #000;
+	}
+	#nav a {
+		font-size:14px;
+		padding: 2px 12px;	
+	}
+}
+.page-id-713 .mobilecta {
+	display:none;	
+}
