@@ -1,6 +1,6 @@
 <?php
 
-class Order {
+class EW_Order {
 	
 	const NONCE = "wpOrderNonce";
 	
@@ -27,7 +27,7 @@ class Order {
 			));
 		
 		if(is_wp_error($this->order_id)) {
-			$this->error = $order_id;
+			$this->error = $this->order_id;
 			return false;
 		} else {
 			foreach($this->args as $k => $v) {

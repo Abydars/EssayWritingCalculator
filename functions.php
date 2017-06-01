@@ -1,5 +1,140 @@
 <?php
 
+function ew_authorization() {
+    global $post;
+
+    $options = get_option('ew');
+
+    if(is_user_logged_in()) {
+        if ((isset($options['signup_page']) && $post->ID == $options['signup_page']) || isset($options['signin_page']) && $post->ID == $options['signin_page'])
+            wp_redirect(get_bloginfo('url'));
+    }
+}
+
+function ew_signup_request() {
+    if(isset($_POST['nonce']) && wp_verify_nonce($_POST['nonce'], EW_User::SIGNUP_NONCE)) {
+        $isLoggedIn = EW_User::doSignup($_POST['email'], $_POST['password'], isset($_POST['remember_me']));
+        $redirectUrl = !empty($_GET['redirect']) ? $_GET['redirect'] : "";
+
+        if(empty($redirectUrl))
+            $redirectUrl = get_bloginfo('url');
+
+        if($isLoggedIn['status'] == true) {
+            wp_redirect($redirectUrl);
+            exit;
+        } else {
+            add_action('ew_login_error_messages', function() use (&$isLoggedIn) {
+                echo apply_filters('ew_error_message', $isLoggedIn['message']);
+            });
+        }
+    }
+}
+
+function ew_signin_request() {
+    if(isset($_POST['nonce']) && wp_verify_nonce($_POST['nonce'], EW_User::SIGNIN_NONCE)) {
+        $isLoggedIn = EW_User::doLogin($_POST['email'], $_POST['password'], isset($_POST['remember_me']));
+        $redirectUrl = !empty($_GET['redirect']) ? $_GET['redirect'] : "";
+
+        if(empty($redirectUrl))
+            $redirectUrl = get_bloginfo('url');
+
+        if($isLoggedIn['status'] == true) {
+            wp_redirect($redirectUrl);
+            exit;
+        } else {
+            add_action('ew_login_error_messages', function() use (&$isLoggedIn) {
+                echo apply_filters('ew_error_message', $isLoggedIn['message']);
+            });
+        }
+    }
+}
+
+function render_ew_error_message_filter($message) {
+    return '<div class="alert alert-danger">'.$message.'</div>';
+}
+
+function render_ew_success_message_filter($message) {
+    return '<div class="alert alert-success">'.$message.'</div>';
+}
+
+function render_ew_signin() {
+    ob_start();
+
+    // INCLUDE SCRIPTS
+    wp_enqueue_script( 'prices', plugins_url( '/assets/js/prices.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'bootstrap', plugins_url( '/assets/bootstrap/js/bootstrap.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput-canvas-blob', plugins_url( '/assets/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput-sortable', plugins_url( '/assets/bootstrap-fileinput/js/plugins/sortable.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput-purify', plugins_url( '/assets/bootstrap-fileinput/js/plugins/purify.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/js/fileinput.min.js' , __FILE__ ), array( 'jquery' ) );
+
+    // INCLUDE STYLES
+    wp_enqueue_style( 'styles', plugins_url( '/assets/css/styles.css' , __FILE__ ) );
+    wp_enqueue_style( 'bootstrap', plugins_url( '/assets/bootstrap/css/bootstrap.min.css' , __FILE__ ) );
+    wp_enqueue_style( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/css/fileinput.min.css' , __FILE__ ) );
+
+    $options = get_option('ew');
+
+    include_once('shortcodes/ew-signin.php');
+    $contents = ob_get_contents();
+
+    ob_end_clean();
+
+    return $contents;
+}
+
+function render_ew_signup() {
+    ob_start();
+
+    // INCLUDE SCRIPTS
+    wp_enqueue_script( 'prices', plugins_url( '/assets/js/prices.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'bootstrap', plugins_url( '/assets/bootstrap/js/bootstrap.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput-canvas-blob', plugins_url( '/assets/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput-sortable', plugins_url( '/assets/bootstrap-fileinput/js/plugins/sortable.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput-purify', plugins_url( '/assets/bootstrap-fileinput/js/plugins/purify.min.js' , __FILE__ ), array( 'jquery' ) );
+    wp_enqueue_script( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/js/fileinput.min.js' , __FILE__ ), array( 'jquery' ) );
+
+    // INCLUDE STYLES
+    wp_enqueue_style( 'styles', plugins_url( '/assets/css/styles.css' , __FILE__ ) );
+    wp_enqueue_style( 'bootstrap', plugins_url( '/assets/bootstrap/css/bootstrap.min.css' , __FILE__ ) );
+    wp_enqueue_style( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/css/fileinput.min.css' , __FILE__ ) );
+
+    $options = get_option('ew');
+
+    include_once('shortcodes/ew-signup.php');
+    $contents = ob_get_contents();
+
+    ob_end_clean();
+
+    return $contents;
+}
+
+function render_ew_mini_calculator() {
+	ob_start();
+	
+	// INCLUDE SCRIPTS
+	wp_enqueue_script( 'prices', plugins_url( '/assets/js/prices.js' , __FILE__ ), array( 'jquery' ) );
+	wp_enqueue_script( 'bootstrap', plugins_url( '/assets/bootstrap/js/bootstrap.min.js' , __FILE__ ), array( 'jquery' ) );
+	wp_enqueue_script( 'fileinput-canvas-blob', plugins_url( '/assets/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js' , __FILE__ ), array( 'jquery' ) );
+	wp_enqueue_script( 'fileinput-sortable', plugins_url( '/assets/bootstrap-fileinput/js/plugins/sortable.min.js' , __FILE__ ), array( 'jquery' ) );
+	wp_enqueue_script( 'fileinput-purify', plugins_url( '/assets/bootstrap-fileinput/js/plugins/purify.min.js' , __FILE__ ), array( 'jquery' ) );
+	wp_enqueue_script( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/js/fileinput.min.js' , __FILE__ ), array( 'jquery' ) );
+	
+	// INCLUDE STYLES
+	wp_enqueue_style( 'styles', plugins_url( '/assets/css/styles.css' , __FILE__ ) );
+	wp_enqueue_style( 'bootstrap', plugins_url( '/assets/bootstrap/css/bootstrap.min.css' , __FILE__ ) );
+	wp_enqueue_style( 'fileinput', plugins_url( '/assets/bootstrap-fileinput/css/fileinput.min.css' , __FILE__ ) );
+	
+	$options = get_option('ew');
+	
+	include_once('shortcodes/ew-mini-calculator.php');
+	$contents = ob_get_contents();
+	
+	ob_end_clean();
+	
+	return $contents;
+}
+
 function render_ew_calculator() {
 	ob_start();
 	
@@ -99,7 +234,7 @@ function admin_order_columns_rendering( $column, $post_id ) {
 			}
 			
 			echo '<strong>
-					<a class="row-title" href="'.add_query_arg(array("post" => $post_id, "action" => "edit"), admin_url("post.php")). '" aria-label="“'.$post->post_title.'” (Edit)">Order #'.$post->ID.'</a><br/>
+					<a class="row-title" href="'.add_query_arg(array("post" => $post_id, "action" => "edit"), admin_url("post.php")). '" aria-label="ï¿½'.$post->post_title.'ï¿½ (Edit)">Order #'.$post->ID.'</a><br/>
 					<div>'.$type.'</div>
 				  </strong>';
 		break;
@@ -156,7 +291,7 @@ function ew_save_options() {
 }
 
 function ew_place_order() {
-	if(isset($_REQUEST['nonce']) && wp_verify_nonce($_REQUEST['nonce'], Order::NONCE)) {
+	if(isset($_REQUEST['nonce']) && wp_verify_nonce($_REQUEST['nonce'], EW_Order::NONCE)) {
 		$json = file_get_contents(dirname(__FILE__) . '/assets/data.json');
 		$data = json_decode($json, true);
 		
@@ -198,7 +333,7 @@ function ew_place_order() {
 				"attachments"		=> isset($req['attachments']) ? $req['attachments'] : ""
 			);
 			
-		$order = new Order;
+		$order = new EW_Order();
 		$order->set_data($args);
 		
 		if($order->place()) {
@@ -221,7 +356,7 @@ function ew_place_order() {
 }
 
 function ew_pricing() {
-	if(isset($_REQUEST['nonce']) && wp_verify_nonce($_REQUEST['nonce'], Order::NONCE)) {
+	if(isset($_REQUEST['nonce']) && wp_verify_nonce($_REQUEST['nonce'], EW_Order::NONCE)) {
 		$json = file_get_contents(dirname(__FILE__) . '/assets/data.json');
 		$options = get_option('ew');
 		
@@ -284,6 +419,30 @@ function calculator_options() {
 								<input type="text" name="ew[after-payment-url]" value="<?php echo (isset($options['after-payment-url']) ? $options['after-payment-url'] : ""); ?>">
 							</td>
 						</tr>
+						<tr valign="top">
+							<th scope="row">
+								<label for="ew[signup_page]">Signup URL</label>
+							</th>
+							<td>
+                                <select name="ew[signup_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['signup_page']) && $options['signup_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+							</td>
+						</tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[signin_page]">Signin URL</label>
+                            </th>
+                            <td>
+                                <select name="ew[signin_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['signin_page']) && $options['signin_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
 					</tbody>
 				</table>
 				<h3>Order Email</h3>
