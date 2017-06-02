@@ -4,12 +4,12 @@
     width: 55%;
 }
 #allsteps > div > div,.stepbuttons .prev,.stepbuttons .next,.stepbuttons .submit {
-	float:left;
-	margin-right:10px;
-	background:#787878;
-	padding: 8px 17px;
-	color:#2f2f2f;
-	font-size: 17px;
+    float:left;
+    margin-right:10px;
+    background:#787878;
+    padding: 8px 17px;
+    color:#2f2f2f;
+    font-size: 17px;
 }
 .stepbuttons a.prev, .stepbuttons a.next, .stepbuttons a.submit {
     color: #fff !important;
@@ -53,7 +53,7 @@
     float: right;
 }
 .price-container .was {
-	color: red;
+    color: red;
 }
 #calculatorcont #orderinfo > div {
     font-size: 15px;
@@ -116,47 +116,47 @@
     vertical-align: middle;
 }
 textarea.required.invalid {
-	box-shadow: 0px 0px 3px #ffa3a3;
-	border-color: #F00 !important;
+    box-shadow: 0px 0px 3px #ffa3a3;
+    border-color: #F00 !important;
 }
 select.required.invalid {
-	box-shadow: 0px 0px 3px #ffa3a3;
-	border-color: #F00 !important;
+    box-shadow: 0px 0px 3px #ffa3a3;
+    border-color: #F00 !important;
 }
 input.required.invalid {
-	box-shadow: 0px 0px 3px #ffa3a3;
-	border-color: #F00 !important;
+    box-shadow: 0px 0px 3px #ffa3a3;
+    border-color: #F00 !important;
 }
 .formitem label {
     font-size: 15px;
     margin-bottom: 5px;
 }
 .view-lesssteps input[type="text"],.view-lesssteps input[type="email"],.view-lesssteps select,.view-lesssteps textarea {
-	background:#fff;
-	padding:6px;
-	border: 1px solid;
-	outline: none;
-	width: 100%;
+    background:#fff;
+    padding:6px;
+    border: 1px solid;
+    outline: none;
+    width: 100%;
 }
 .formitem {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 #calccont.loading {
-	position: relative;
-	float: left;
+    position: relative;
+    float: left;
     width: 100%;
 }
 #calccont.loading::before {
-	content: attr(data-text);
-	background: url(../img/loading_large.gif) #FFF top no-repeat;
-	position: absolute;
-	text-align: center;
-	padding-top: 80px;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: 999;
+    content: attr(data-text);
+    background: url(../img/loading_large.gif) #FFF top no-repeat;
+    position: absolute;
+    text-align: center;
+    padding-top: 80px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
 }
 .calcinfo {
     clear: both;
@@ -181,34 +181,95 @@ input.required.invalid {
     margin-top: 10px;
 }
 .price-container.pricecont .price-amount {
-	font-size: 20px;
+    font-size: 20px;
+}
+.ew-mini-calculator {
+    background: #3c3c3c;
+    color: #FFF;
+    border-radius: 3px;
+}
+.ew-mini-calculator .section {
+    background: none;
+    border: none;
+    padding: 20px;
+}
+.ew-mini-calculator .section .section-content {}
+.ew-mini-calculator .section .section-content > div {
+    float: none !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+}
+.ew-mini-calculator .section .section-content > div span {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 12px !important;
+}
+.ew-mini-calculator .section .section-content > div select {
+    width: 100% !important;
+    background: #292d34;
+    border: 1px solid #42464d;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+}
+.ew-mini-calculator .section .section-content > div select:focus,
+.ew-mini-calculator .section .section-content > div select:hover {
+    border-color: #FFF;
+    cursor: pointer;
+}
+.ew-mini-calculator .section .sub {
+    background: none;
+    border: none;
+    text-align: center;
+    margin: 0 0 20px;
+}
+.ew-mini-calculator .calcinfo {
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+.ew-mini-calculator .calcinfo > div {
+    display: none;
+}
+.ew-mini-calculator .calcinfo .price-container {
+    display: block;
+}
+.ew-mini-calculator input[type=submit] {
+    margin: 0 auto 10px;
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    background: #5a5af1;
+    border-radius: 20px;
+    outline: none;
 }
 
 @media screen and (max-width: 480px) {
-	#allsteps {
-		width: 100%;
-	}
-	#allsteps > div > div {
-		display: none;
-		width: 100%;
-	}
-	#allsteps > div > div.active {
-		display: block;
-	}
-	#orderinfo {
-		float: none;
-		width: 100%;
-		clear: both;
-		margin-bottom: 25px;
-	}
-	#calc > div {
-		width: 100%;
-	}
-	#calc > div span {
-		width: 100%;
-		text-align: left;
-	}
-	#calc > div select {
-		width: 100%;
-	}
+    #allsteps {
+        width: 100%;
+    }
+    #allsteps > div > div {
+        display: none;
+        width: 100%;
+    }
+    #allsteps > div > div.active {
+        display: block;
+    }
+    #orderinfo {
+        float: none;
+        width: 100%;
+        clear: both;
+        margin-bottom: 25px;
+    }
+    #calc > div {
+        width: 100%;
+    }
+    #calc > div span {
+        width: 100%;
+        text-align: left;
+    }
+    #calc > div select {
+        width: 100%;
+    }
 }

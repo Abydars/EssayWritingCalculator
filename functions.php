@@ -419,9 +419,21 @@ function calculator_options() {
 								<input type="text" name="ew[after-payment-url]" value="<?php echo (isset($options['after-payment-url']) ? $options['after-payment-url'] : ""); ?>">
 							</td>
 						</tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[calc_page]">Calculator Page</label>
+                            </th>
+                            <td>
+                                <select name="ew[calc_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['calc_page']) && $options['calc_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
 						<tr valign="top">
 							<th scope="row">
-								<label for="ew[signup_page]">Signup URL</label>
+								<label for="ew[signup_page]">Signup Page</label>
 							</th>
 							<td>
                                 <select name="ew[signup_page]">
@@ -433,7 +445,7 @@ function calculator_options() {
 						</tr>
                         <tr valign="top">
                             <th scope="row">
-                                <label for="ew[signin_page]">Signin URL</label>
+                                <label for="ew[signin_page]">Signin Page</label>
                             </th>
                             <td>
                                 <select name="ew[signin_page]">
