@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="da1e95d2-4b9a-4090-8d04-5b7cedd489b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/styles.css" afterPath="$PROJECT_DIR$/assets/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/prices.js" afterPath="$PROJECT_DIR$/assets/js/prices.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ew_calculator.php" afterPath="$PROJECT_DIR$/ew_calculator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shortcodes/ew-mini-calculator.php" afterPath="$PROJECT_DIR$/shortcodes/ew-mini-calculator.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prices.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="prices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="344" column="27" lean-forward="false" selection-start-line="344" selection-start-column="27" selection-end-line="344" selection-end-column="27" />
+            <state relative-caret-position="239">
+              <caret line="348" column="22" lean-forward="true" selection-start-line="348" selection-start-column="22" selection-end-line="348" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -82,8 +78,8 @@
       <file leaf-file-name="ew-mini-calculator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="272">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -125,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="218" column="23" lean-forward="true" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+            <state relative-caret-position="517">
+              <caret line="271" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="302" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -139,8 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add_short</find>
-      <find>ORDER::</find>
       <find>ew_upload_request</find>
       <find>ew_save_options</find>
       <find>O</find>
@@ -169,6 +163,8 @@
       <find>currency</find>
       <find>new_</find>
       <find>new_ex</find>
+      <find>.ew-mini-calculator .section .section-content</find>
+      <find>.ew-mini-calculator .calcinfo .price-container</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\hztech\wp-content\plugins\ew-calculator</dir>
@@ -186,11 +182,11 @@
         <option value="$PROJECT_DIR$/class/EW_User.php" />
         <option value="$PROJECT_DIR$/shortcodes/ew-signup.php" />
         <option value="$PROJECT_DIR$/shortcodes/ew-signin.php" />
-        <option value="$PROJECT_DIR$/assets/css/styles.css" />
         <option value="$PROJECT_DIR$/ew_calculator.php" />
         <option value="$PROJECT_DIR$/shortcodes/ew-mini-calculator.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/assets/js/prices.js" />
+        <option value="$PROJECT_DIR$/assets/css/styles.css" />
       </list>
     </option>
   </component>
@@ -443,12 +439,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496343573226</updated>
-      <workItem from="1496343575439" duration="28961000" />
+      <workItem from="1496343575439" duration="31352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28961000" />
+    <option name="totallyTimeSpent" value="31352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -545,7 +541,7 @@
         <state relative-caret-position="17">
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding>
-            <element signature="e#746#752#1#HTML" expanded="true" />
+            <element signature="e#746#752#1#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -578,30 +574,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="218" column="23" lean-forward="true" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shortcodes/ew-signin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding>
             <element signature="e#746#752#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,8 +616,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="344" column="27" lean-forward="false" selection-start-line="344" selection-start-column="27" selection-end-line="344" selection-end-column="27" />
+        <state relative-caret-position="239">
+          <caret line="348" column="22" lean-forward="true" selection-start-line="348" selection-start-column="22" selection-end-line="348" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="271" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="302" selection-end-column="1" />
           <folding />
         </state>
       </provider>

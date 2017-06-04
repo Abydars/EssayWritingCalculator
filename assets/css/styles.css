@@ -194,7 +194,13 @@ input.required.invalid {
     padding: 20px;
     margin-bottom: 0;
 }
-.ew-mini-calculator .section .section-content {}
+.ew-mini-calculator .section .section-content {
+    -webkit-transition: display 1s;
+    -moz-transition: display 1s;
+    -ms-transition: display 1s;
+    -o-transition: display 1s;
+    transition: display 1s;
+}
 .ew-mini-calculator .section .section-content > div {
     float: none !important;
     width: 100% !important;
@@ -234,6 +240,9 @@ input.required.invalid {
     margin: 40px;
     display: none;
 }
+.ew-mini-calculator .loading .section .section-content {
+    display: none;
+}
 .ew-mini-calculator .calcinfo {
     padding: 0;
     text-align: center;
@@ -258,6 +267,10 @@ input.required.invalid {
     padding-top: 100px;
     background: url(../img/loading_large_mini.gif) transparent top no-repeat;
     background-size: 50px;
+}
+.ew-mini-calculator .loading .calcinfo .price-container,
+.ew-mini-calculator .loading input[type=submit]{
+    display: none;
 }
 
 @media screen and (max-width: 480px) {
