@@ -199,11 +199,31 @@ function disableFormWithMessage(msg) {
 }
 
 function enableForm() {
-	var $ = jQuery;
-	
-	$("#calccont")
-		.removeClass("loading")
-		.attr("data-text", "Loading...");
+	setTimeout(populateFieldsFromSession, 1000);
+}
+
+function populateFieldsFromSession() {
+    var $ = jQuery;
+
+	var storage = localStorage.getItem('ew-storage');
+	if(typeof storage !== "undefined") {
+		try {
+            storage = JSON.parse(storage);
+            console.log(storage);
+            for(var key in storage) {
+                var val = storage[key];
+
+                $("#calc select[name='"+key+"']").val(val);
+                $("#calc select[name='"+key+"']").trigger('change');
+            }
+        } catch (e) {
+			console.log(e);
+		}
+	}
+
+    $("#calccont")
+        .removeClass("loading")
+        .attr("data-text", "Loading...");
 }
 
 function animateFormTop() {
@@ -215,7 +235,7 @@ function animateFormTop() {
 	}, 500);
 }
 
-function initializeForm() {
+function initializeForm(currency) {
 	var $ = jQuery;
 	
 	$("#input-700").fileinput({
@@ -237,7 +257,7 @@ function initializeForm() {
 	enableForm();
 	totalsteps = $("#steps .step").length;
 
-	setcurrency('USD');
+	setcurrency(currency);
 	
 	calc.children={};
 	calc.selected=default_selected;
@@ -297,7 +317,7 @@ function loadPricingJson(nonce) {
 			calc = e;
 			console.log(e);
 			
-			initializeForm();
+			initializeForm(e.currency);
 		},
 		error: function(e) {
 			console.log(e);
@@ -991,7 +1011,7 @@ function setdiscount(c,mx) {
 	}
 	setprice(p);
 	doprices();
-};
+}
 
 function checkcoupon(input) {
 	var $=jQuery;
@@ -1022,3 +1042,24 @@ function checkcoupon(input) {
 		}
 	});
 };
+
+jQuery(function($) {
+	var formSaved = false;
+	$(".ew-mini-calculator form").submit(function(e) {
+		if(!formSaved) {
+            e.preventDefault();
+
+            var arr = $(this).serializeArray();
+            var data = {};
+
+            for (var i in arr) {
+                data[arr[i].name] = arr[i].value;
+            }
+            localStorage.setItem('ew-storage', JSON.stringify(data));
+
+            formSaved = true;
+
+            $(this).submit();
+        }
+	});
+});

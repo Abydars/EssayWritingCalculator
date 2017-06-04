@@ -6,21 +6,38 @@ function ew_authorization() {
     $options = get_option('ew');
 
     if(is_user_logged_in()) {
-        if ((isset($options['signup_page']) && $post->ID == $options['signup_page']) || isset($options['signin_page']) && $post->ID == $options['signin_page'])
-            wp_redirect(get_bloginfo('url'));
+        if ((isset($options['signup_page']) && $post->ID == $options['signup_page']) || isset($options['signin_page']) && $post->ID == $options['signin_page']) {
+            $redirectUrl = get_bloginfo('url');
+
+            if (!empty($options['calc_page']))
+                $redirectUrl = get_permalink($options['calc_page']);
+
+            wp_redirect($redirectUrl);
+        }
+    } else if((isset($options['calc_page']) && $post->ID == $options['calc_page']) && !isset($options['allow_unauthenticated'])) {
+        $redirectUrl = get_bloginfo('url');
+
+        if (!empty($options['signin_page']))
+            $redirectUrl = get_permalink($options['signin_page']);
+
+        wp_redirect($redirectUrl);
     }
+
 }
 
 function ew_signup_request() {
     if(isset($_POST['nonce']) && wp_verify_nonce($_POST['nonce'], EW_User::SIGNUP_NONCE)) {
+        $options = get_option('ew');
+
         $isLoggedIn = EW_User::doSignup($_POST['email'], $_POST['password'], isset($_POST['remember_me']));
         $redirectUrl = !empty($_GET['redirect']) ? $_GET['redirect'] : "";
+        $afterLogin = !empty($options['after_login_page']) ? get_permalink($options['after_login_page']) : $redirectUrl;
 
-        if(empty($redirectUrl))
-            $redirectUrl = get_bloginfo('url');
+        if(empty($afterLogin))
+            $afterLogin = get_bloginfo('url');
 
         if($isLoggedIn['status'] == true) {
-            wp_redirect($redirectUrl);
+            wp_redirect($afterLogin);
             exit;
         } else {
             add_action('ew_login_error_messages', function() use (&$isLoggedIn) {
@@ -32,14 +49,17 @@ function ew_signup_request() {
 
 function ew_signin_request() {
     if(isset($_POST['nonce']) && wp_verify_nonce($_POST['nonce'], EW_User::SIGNIN_NONCE)) {
+        $options = get_option('ew');
+
         $isLoggedIn = EW_User::doLogin($_POST['email'], $_POST['password'], isset($_POST['remember_me']));
         $redirectUrl = !empty($_GET['redirect']) ? $_GET['redirect'] : "";
+        $afterLogin = !empty($options['after_login_page']) ? get_permalink($options['after_login_page']) : $redirectUrl;
 
-        if(empty($redirectUrl))
-            $redirectUrl = get_bloginfo('url');
+        if(empty($afterLogin))
+            $afterLogin = get_bloginfo('url');
 
         if($isLoggedIn['status'] == true) {
-            wp_redirect($redirectUrl);
+            wp_redirect($afterLogin);
             exit;
         } else {
             add_action('ew_login_error_messages', function() use (&$isLoggedIn) {
@@ -366,7 +386,11 @@ function ew_pricing() {
 		$config["notify_url"] = isset($options["after-payment-url"]) ? add_query_arg(array("notify" => ""), $options["after-payment-url"]) : add_query_arg(array("notify" => ""), get_bloginfo('url'));
 		
 		$config["upload_url"] = add_query_arg(array("upload_file" => ""), get_bloginfo("url"));
-		
+        $config["currency"] = isset($options["currency"]) ? $options["currency"] : 'GBP';
+
+        if(!empty($options["exchange_rate"]))
+            $config["exchange"][$config["currency"]] = $options["exchange_rate"];
+
 		$json = json_encode($config);
 		
 		echo $json;
@@ -395,11 +419,104 @@ function check_coupon() {
 function calculator_options() {
 	wp_enqueue_style('options-css', EW_URL . '/assets/css/options.css');
 	$options = get_option('ew');
+
+    $json = file_get_contents(dirname(__FILE__) . '/assets/data.json');
+    $data = json_decode($json, true);
 	?>
 	<div class="wrap" id="hz">
+        <script>
+            var exchange_rates = <?php echo json_encode($data['exchange']); ?>;
+        </script>
 		<h2>Calculator Options</h2>
 		<form method="POST">
 			<div class="section">
+                <table class="form-table">
+                    <tbody>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[calc_page]">Calculator Page</label>
+                            </th>
+                            <td>
+                                <select name="ew[calc_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['calc_page']) && $options['calc_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[signup_page]">Signup Page</label>
+                            </th>
+                            <td>
+                                <select name="ew[signup_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['signup_page']) && $options['signup_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[signin_page]">Signin Page</label>
+                            </th>
+                            <td>
+                                <select name="ew[signin_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['signin_page']) && $options['signin_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[after_login_page]">Redirect After Login</label>
+                            </th>
+                            <td>
+                                <select name="ew[after_login_page]">
+                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
+                                        <option<?php echo ((isset($options['after_login_page']) && $options['after_login_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[allow_unauthenticated]">Allow unauthenticated users</label>
+                            </th>
+                            <td>
+                                <input type="checkbox" name="ew[allow_unauthenticated]" value="1"<?php echo (isset($options['allow_unauthenticated']) ? ' checked="checked"' : ''); ?> />
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[currency]">Currency<br/><small>Default: GBP</small></label>
+                            </th>
+                            <td>
+                                <select id="currency" name="ew[currency]">
+                                    <?php foreach($data['exchange'] as $currency => $rate) { ?>
+                                        <option<?php echo ((isset($options['currency']) && $options['currency'] == $currency) ? " selected" : ""); ?>><?php echo $currency; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <th scope="row">
+                                <label for="ew[exchange_rate]">Exchange Rate<br/><small>Default: 1</small></label>
+                            </th>
+                            <td>
+                                <script>
+                                    jQuery(function($) {
+                                        $("#currency").on("change", function() {
+                                            $("#exchange_rate").val(exchange_rates[$(this).val()]);
+                                        });
+                                    });
+                                </script>
+                                <input id="exchange_rate" type="number" step="any" name="ew[exchange_rate]" value="<?php echo (isset($options['exchange_rate']) ? $options['exchange_rate'] : ""); ?>" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 				<h3>Payment Settings</h3>
 				<table class="form-table">
 					<tbody>
@@ -419,42 +536,6 @@ function calculator_options() {
 								<input type="text" name="ew[after-payment-url]" value="<?php echo (isset($options['after-payment-url']) ? $options['after-payment-url'] : ""); ?>">
 							</td>
 						</tr>
-                        <tr valign="top">
-                            <th scope="row">
-                                <label for="ew[calc_page]">Calculator Page</label>
-                            </th>
-                            <td>
-                                <select name="ew[calc_page]">
-                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
-                                        <option<?php echo ((isset($options['calc_page']) && $options['calc_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </td>
-                        </tr>
-						<tr valign="top">
-							<th scope="row">
-								<label for="ew[signup_page]">Signup Page</label>
-							</th>
-							<td>
-                                <select name="ew[signup_page]">
-                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
-                                        <option<?php echo ((isset($options['signup_page']) && $options['signup_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
-                                    <?php } ?>
-                                </select>
-							</td>
-						</tr>
-                        <tr valign="top">
-                            <th scope="row">
-                                <label for="ew[signin_page]">Signin Page</label>
-                            </th>
-                            <td>
-                                <select name="ew[signin_page]">
-                                    <?php foreach(get_posts(array('post_type' => 'page')) as $page) { ?>
-                                        <option<?php echo ((isset($options['signin_page']) && $options['signin_page'] == $page->ID) ? " selected" : ""); ?> value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </td>
-                        </tr>
 					</tbody>
 				</table>
 				<h3>Order Email</h3>

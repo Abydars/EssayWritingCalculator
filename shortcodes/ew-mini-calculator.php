@@ -3,7 +3,7 @@
 		var ajx = "<?php echo admin_url('admin-ajax.php'); ?>";
 	</script>
 	<noscript>You need JavaScript enabled to be able to complete this form.</noscript>
-	<form method="post" name="calcform" action="<?php echo (!empty($options['signup_page']) ? get_permalink($options['signup_page']) : ""); ?>" id="calcform" class="validator">
+	<form method="post" name="calc-mini-form" action="<?php echo (!empty($options['signup_page']) ? add_query_arg('redirect', get_permalink($options['calc_page']), get_permalink($options['signup_page'])) : ""); ?>" id="calcform" class="validator">
 		<input type="hidden" name="currency" value="USD">
 		<input type="hidden" name="price" value="210.00">
 		<input type="hidden" name="deliverydate" value="8pm on 18th Jan 2017">

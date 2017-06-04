@@ -2,9 +2,9 @@
 /*
 Plugin Name: Essay Writing Order Form
 Plugin URI: http://hztech.biz
-Description: A custom developed order form
-Version: 0.0.2
-Author: Hztech
+Description: Essay writing calculator with order/payment form
+Version: 0.0.3
+Author: Ars
 */
 
 define('EW_URL', plugins_url('', __FILE__));

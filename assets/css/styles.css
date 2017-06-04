@@ -192,6 +192,7 @@ input.required.invalid {
     background: none;
     border: none;
     padding: 20px;
+    margin-bottom: 0;
 }
 .ew-mini-calculator .section .section-content {}
 .ew-mini-calculator .section .section-content > div {
@@ -223,6 +224,15 @@ input.required.invalid {
     border: none;
     text-align: center;
     margin: 0 0 20px;
+    color: #FFF;
+    font-size: 20px;
+}
+.ew-mini-calculator .loading .section {
+    padding: 60px;
+}
+.ew-mini-calculator .loading .section .sub {
+    margin: 40px;
+    display: none;
 }
 .ew-mini-calculator .calcinfo {
     padding: 0;
@@ -243,6 +253,11 @@ input.required.invalid {
     background: #5a5af1;
     border-radius: 20px;
     outline: none;
+}
+.ew-mini-calculator #calccont.loading::before {
+    padding-top: 100px;
+    background: url(../img/loading_large_mini.gif) transparent top no-repeat;
+    background-size: 50px;
 }
 
 @media screen and (max-width: 480px) {
