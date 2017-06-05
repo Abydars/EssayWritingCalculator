@@ -384,7 +384,8 @@ function ew_pricing() {
 		
 		$config["return_url"] = isset($options["after-payment-url"]) ? add_query_arg(array("confirm" => ""), $options["after-payment-url"]) : add_query_arg(array("confirm" => ""), get_bloginfo('url'));
 		$config["notify_url"] = isset($options["after-payment-url"]) ? add_query_arg(array("notify" => ""), $options["after-payment-url"]) : add_query_arg(array("notify" => ""), get_bloginfo('url'));
-		
+		$config["paypal_email"] = isset($options["paypal_email"]) ? $options['paypal_email'] : '';
+
 		$config["upload_url"] = add_query_arg(array("upload_file" => ""), get_bloginfo("url"));
         $config["currency"] = isset($options["currency"]) ? $options["currency"] : 'GBP';
 
@@ -530,7 +531,7 @@ function calculator_options() {
 						</tr>
 						<tr valign="top">
 							<th scope="row">
-								<label for="ew[paypal_email]">Paypal Return</label>
+								<label for="ew[after-payment-url]">Paypal Return</label>
 							</th>
 							<td>
 								<input type="text" name="ew[after-payment-url]" value="<?php echo (isset($options['after-payment-url']) ? $options['after-payment-url'] : ""); ?>">

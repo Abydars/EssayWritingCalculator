@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1e95d2-4b9a-4090-8d04-5b7cedd489b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/styles.css" afterPath="$PROJECT_DIR$/assets/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/prices.js" afterPath="$PROJECT_DIR$/assets/js/prices.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,15 +30,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="391" column="12" lean-forward="false" selection-start-line="391" selection-start-column="12" selection-end-line="391" selection-end-column="12" />
+            <state relative-caret-position="257">
+              <caret line="655" column="44" lean-forward="true" selection-start-line="655" selection-start-column="44" selection-end-line="655" selection-end-column="44" />
               <folding>
-                <marker date="1496514855650" expanded="true" signature="11068:11306" ph="..." />
-                <marker date="1496514855650" expanded="true" signature="21844:21862" ph="..." />
-                <marker date="1496514855650" expanded="true" signature="21976:21997" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="11068:11306" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="16146:16226" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="16163:16226" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="17236:17560" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="17281:17396" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="17429:17560" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="17493:17560" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="18024:18348" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="18069:18184" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="18217:18348" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="18281:18348" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="18812:19155" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="18857:18986" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="19019:19155" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="19088:19155" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="19629:19973" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="19674:19815" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="19848:19973" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="20140:20491" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="20185:20326" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="20359:20491" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="20434:20491" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="20909:21684" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="20954:21103" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21136:21684" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21177:21541" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21234:21498" ph="{...}" />
+                <marker date="1496614035056" expanded="true" signature="21315:21458" ph="{...}" />
+                <marker date="1496614035056" expanded="true" signature="21922:22153" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21935:21953" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21935:22153" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21959:22153" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="21983:22055" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22067:22088" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22067:22153" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22257:22462" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22281:22359" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22371:22462" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22635:22890" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22648:22890" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22672:22890" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22696:22786" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="22798:22890" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="23006:23213" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="23030:23130" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="23142:23213" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="31466:31532" ph="..." />
+                <marker date="1496614035056" expanded="true" signature="32967:33033" ph="..." />
               </folding>
             </state>
           </provider>
@@ -46,8 +92,30 @@
       <file leaf-file-name="prices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="348" column="22" lean-forward="true" selection-start-line="348" selection-start-column="22" selection-end-line="348" selection-end-column="22" />
+            <state relative-caret-position="358">
+              <caret line="433" column="36" lean-forward="true" selection-start-line="433" selection-start-column="36" selection-end-line="433" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="197" column="77" lean-forward="false" selection-start-line="197" selection-start-column="77" selection-end-line="197" selection-end-column="77" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ew-calculator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shortcodes/ew-calculator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="1184" column="21" lean-forward="true" selection-start-line="1184" selection-start-column="21" selection-end-line="1184" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -87,26 +155,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="115" column="3" lean-forward="true" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="steps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/steps.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -121,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="271" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="302" selection-end-column="1" />
+            <state relative-caret-position="313">
+              <caret line="259" column="21" lean-forward="true" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -135,16 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ew_upload_request</find>
-      <find>ew_save_options</find>
-      <find>O</find>
-      <find>Order</find>
-      <find>Signin U</find>
-      <find>loading</find>
-      <find>.ew-mini-calculator .section .sub</find>
-      <find>#calccont.loading::before</find>
-      <find>#calccont.loading::before {</find>
-      <find>onMini</find>
       <find>localStorage</find>
       <find>populateFieldsFromSession</find>
       <find>ew-storage</find>
@@ -165,6 +203,16 @@
       <find>new_ex</find>
       <find>.ew-mini-calculator .section .section-content</find>
       <find>.ew-mini-calculator .calcinfo .price-container</find>
+      <find>Order</find>
+      <find>jayin</find>
+      <find>paypal_email</find>
+      <find>initial</find>
+      <find>onFormInitialized</find>
+      <find>form</find>
+      <find>Required fields must be filled</find>
+      <find>Order request failed, please try again by re-submitting the form</find>
+      <find>paypal</find>
+      <find>notify</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\hztech\wp-content\plugins\ew-calculator</dir>
@@ -184,9 +232,10 @@
         <option value="$PROJECT_DIR$/shortcodes/ew-signin.php" />
         <option value="$PROJECT_DIR$/ew_calculator.php" />
         <option value="$PROJECT_DIR$/shortcodes/ew-mini-calculator.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/assets/js/prices.js" />
         <option value="$PROJECT_DIR$/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js" />
+        <option value="$PROJECT_DIR$/assets/js/prices.js" />
       </list>
     </option>
   </component>
@@ -243,6 +292,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ew-calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hztech" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ew-calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hztech" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twentysixteen" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ew-calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hztech" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twentysixteen" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,12 +554,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496343573226</updated>
-      <workItem from="1496343575439" duration="31352000" />
+      <workItem from="1496343575439" duration="35853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31352000" />
+    <option name="totallyTimeSpent" value="35853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -507,16 +622,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shortcodes/ew-calculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="1182" column="18" lean-forward="true" selection-start-line="1182" selection-start-column="18" selection-end-line="1182" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -602,26 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="391" column="12" lean-forward="false" selection-start-line="391" selection-start-column="12" selection-end-line="391" selection-end-column="12" />
-          <folding>
-            <marker date="1496514855650" expanded="true" signature="11068:11306" ph="..." />
-            <marker date="1496514855650" expanded="true" signature="21844:21862" ph="..." />
-            <marker date="1496514855650" expanded="true" signature="21976:21997" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="348" column="22" lean-forward="true" selection-start-line="348" selection-start-column="22" selection-end-line="348" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -634,9 +719,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="271" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="302" selection-end-column="1" />
+        <state relative-caret-position="313">
+          <caret line="259" column="21" lean-forward="true" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="197" column="77" lean-forward="false" selection-start-line="197" selection-start-column="77" selection-end-line="197" selection-end-column="77" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shortcodes/ew-calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1184" column="21" lean-forward="true" selection-start-line="1184" selection-start-column="21" selection-end-line="1184" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="433" column="36" lean-forward="true" selection-start-line="433" selection-start-column="36" selection-end-line="433" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="655" column="44" lean-forward="true" selection-start-line="655" selection-start-column="44" selection-end-line="655" selection-end-column="44" />
+          <folding>
+            <marker date="1496614035056" expanded="true" signature="11068:11306" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="16146:16226" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="16163:16226" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="17236:17560" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="17281:17396" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="17429:17560" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="17493:17560" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="18024:18348" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="18069:18184" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="18217:18348" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="18281:18348" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="18812:19155" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="18857:18986" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="19019:19155" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="19088:19155" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="19629:19973" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="19674:19815" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="19848:19973" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="20140:20491" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="20185:20326" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="20359:20491" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="20434:20491" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="20909:21684" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="20954:21103" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21136:21684" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21177:21541" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21234:21498" ph="{...}" />
+            <marker date="1496614035056" expanded="true" signature="21315:21458" ph="{...}" />
+            <marker date="1496614035056" expanded="true" signature="21922:22153" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21935:21953" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21935:22153" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21959:22153" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="21983:22055" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22067:22088" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22067:22153" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22257:22462" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22281:22359" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22371:22462" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22635:22890" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22648:22890" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22672:22890" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22696:22786" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="22798:22890" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="23006:23213" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="23030:23130" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="23142:23213" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="31466:31532" ph="..." />
+            <marker date="1496614035056" expanded="true" signature="32967:33033" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

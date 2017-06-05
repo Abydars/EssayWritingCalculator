@@ -14,6 +14,14 @@ var totalsteps = 0;
 var totalPrice = 0;
 var attachments = [];
 
+jQuery.extend({
+    ew: {
+        onFormInitialized: function() {
+            console.log('ew: form init');
+        }
+	}
+});
+
 if (window.location.href.match(/type=modal_answer/gi)) {
 	default_selected[1]=9;
 }
@@ -224,6 +232,8 @@ function populateFieldsFromSession() {
     $("#calccont")
         .removeClass("loading")
         .attr("data-text", "Loading...");
+
+    jQuery.ew.onFormInitialized();
 }
 
 function animateFormTop() {
@@ -392,7 +402,8 @@ function moveToPaymentForm(o) {
 	
 	disableFormWithMessage("Submitting...");
 	
-	if((totalPrice != $(".price-container .amount").first().text()) || (totalPrice != $("input[name=price]").val())) {
+	if(totalPrice != $("input[name=price]").val()) { //(totalPrice != $(".price-container .amount").first().text()) ||
+		console.log(totalPrice + " = " + $("input[name=price]").val());
 		showErrorMessage("Order request failed, please try again by re-submitting the form");
 		enableForm();
 	} else {
