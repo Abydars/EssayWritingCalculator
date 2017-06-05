@@ -1176,7 +1176,7 @@
 					"holiday": [
 						[1482523200, 1482825600, "We have adjusted the date to allow for the Christmas period, we will be closed from the 24th and we reopen on the 27th December", "xmas"]
 					],
-					"ajax": "",
+					"ajax": "",//
 					"premier": 50,
 					"adwords": 0
 				};

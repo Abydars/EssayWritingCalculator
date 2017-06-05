@@ -385,6 +385,7 @@ function ew_pricing() {
 		$config["return_url"] = isset($options["after-payment-url"]) ? add_query_arg(array("confirm" => ""), $options["after-payment-url"]) : add_query_arg(array("confirm" => ""), get_bloginfo('url'));
 		$config["notify_url"] = isset($options["after-payment-url"]) ? add_query_arg(array("notify" => ""), $options["after-payment-url"]) : add_query_arg(array("notify" => ""), get_bloginfo('url'));
 		$config["paypal_email"] = isset($options["paypal_email"]) ? $options['paypal_email'] : '';
+		$config["is_sandbox"] = isset($options["is_sandbox"]);
 
 		$config["upload_url"] = add_query_arg(array("upload_file" => ""), get_bloginfo("url"));
         $config["currency"] = isset($options["currency"]) ? $options["currency"] : 'GBP';

@@ -247,7 +247,7 @@ function animateFormTop() {
 
 function initializeForm(currency) {
 	var $ = jQuery;
-	
+
 	$("#input-700").fileinput({
 		uploadUrl: calc.upload_url,
 		uploadAsync: true,
@@ -427,6 +427,7 @@ function moveToPaymentForm(o) {
 			"return": calc.return_url,
 			"notify_url": calc.notify_url,
 			"item_name": o.type.title,
+			"currency_code": calc.currency,
 			"amount": totalPrice,
 			"first_name": o.fullname,
 			"address1": o.address,
@@ -482,7 +483,7 @@ function payment() {
 		success: function(e) {
 			console.log(e);
 			
-			enableForm();
+			//enableForm();
 			animateFormTop();
 			
 			if(e.status) {
