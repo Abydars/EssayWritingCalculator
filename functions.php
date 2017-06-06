@@ -522,6 +522,14 @@ function calculator_options() {
 				<h3>Payment Settings</h3>
 				<table class="form-table">
 					<tbody>
+                    <tr valign="top">
+                        <th scope="row">
+                            <label for="ew[is_sandbox]">Sandbox mode</label>
+                        </th>
+                        <td>
+                            <input type="checkbox" name="ew[is_sandbox]" value="1"<?php echo (isset($options['is_sandbox']) ? ' checked="checked"' : ''); ?> />
+                        </td>
+                    </tr>
 						<tr valign="top">
 							<th scope="row">
 								<label for="ew[paypal_email]">Paypal Email</label>
