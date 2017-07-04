@@ -1030,7 +1030,7 @@ function checkcoupon(input) {
 	var v=input.val();
 	
 	$('input[name="coupon"]').val(v);
-	
+
 	if (v=='')
 		return setdiscount(0,0);
 	
@@ -1044,9 +1044,11 @@ function checkcoupon(input) {
 		success:function(a) {
 			var am=a.amount ? a.amount : 0;
 			var mx=a.max ? a.max : 0;
+
+			if(am === 0 && mx === 0)
+				alert("Coupon not found");
 			
 			setdiscount(am,mx);
-			console.log(am);
 		},
 		error:function() {
 			setdiscount(0,0);

@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1e95d2-4b9a-4090-8d04-5b7cedd489b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/prices.js" afterPath="$PROJECT_DIR$/assets/js/prices.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,12 +18,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ew_calculator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ew_calculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="27" column="62" lean-forward="true" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+            <state relative-caret-position="147">
+              <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="53" />
               <folding>
                 <element signature="e#6#168#0#PHP" expanded="true" />
               </folding>
@@ -29,60 +31,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EW_Order.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/EW_Order.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-596">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="396" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="891" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="739" column="23" lean-forward="true" selection-start-line="739" selection-start-column="23" selection-end-line="739" selection-end-column="23" />
               <folding>
-                <marker date="1496772418348" expanded="true" signature="11068:11306" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="16203:16283" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="16220:16283" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="17293:17617" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="17338:17453" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="17486:17617" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="17550:17617" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="18081:18405" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="18126:18241" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="18274:18405" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="18338:18405" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="18869:19212" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="18914:19043" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="19076:19212" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="19145:19212" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="19686:20030" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="19731:19872" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="19905:20030" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="20197:20548" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="20242:20383" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="20416:20548" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="20491:20548" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="20966:21741" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="21011:21160" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="21193:21741" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="21234:21598" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="21291:21555" ph="{...}" />
-                <marker date="1496772418348" expanded="true" signature="21372:21515" ph="{...}" />
-                <marker date="1496772418348" expanded="true" signature="21979:22641" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="21992:22441" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="21992:22641" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22447:22641" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22471:22543" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22555:22576" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22555:22641" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22745:22950" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22769:22847" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="22859:22950" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23123:23378" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23136:23378" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23160:23378" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23184:23274" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23286:23378" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23494:23701" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23518:23618" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="23630:23701" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="31954:32020" ph="..." />
-                <marker date="1496772418348" expanded="true" signature="33455:33521" ph="..." />
+                <element signature="e#34035#34078#0#HTML" expanded="true" />
+                <marker date="1499192818666" expanded="true" signature="11046:11531" ph="..." />
+                <marker date="1499192818666" expanded="true" signature="32879:32916" ph="..." />
               </folding>
             </state>
           </provider>
@@ -91,8 +58,8 @@
       <file leaf-file-name="prices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="402" column="43" lean-forward="true" selection-start-line="402" selection-start-column="43" selection-end-line="402" selection-end-column="43" />
+            <state relative-caret-position="232">
+              <caret line="534" column="1" lean-forward="true" selection-start-line="534" selection-start-column="1" selection-end-line="534" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -101,7 +68,7 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
+            <state relative-caret-position="4137">
               <caret line="197" column="77" lean-forward="false" selection-start-line="197" selection-start-column="77" selection-end-line="197" selection-end-column="77" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -113,8 +80,18 @@
       <file leaf-file-name="ew-calculator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shortcodes/ew-calculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="1228" column="73" lean-forward="false" selection-start-line="1228" selection-start-column="63" selection-end-line="1228" selection-end-column="73" />
+            <state relative-caret-position="273">
+              <caret line="1240" column="67" lean-forward="false" selection-start-line="1240" selection-start-column="67" selection-end-line="1240" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -123,21 +100,9 @@
       <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="126">
               <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ew-signin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shortcodes/ew-signin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-              <folding>
-                <element signature="e#746#752#1#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,25 +110,9 @@
       <file leaf-file-name="ew-mini-calculator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="steps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/steps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-              <folding>
-                <marker date="1493932981445" expanded="true" signature="2833:2843" ph="..." />
-                <marker date="1493932981445" expanded="true" signature="3004:3015" ph="..." />
-                <marker date="1493932981445" expanded="true" signature="3151:3162" ph="..." />
-              </folding>
+            <state relative-caret-position="100">
+              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,8 +120,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="259" column="21" lean-forward="true" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
+            <state relative-caret-position="5439">
+              <caret line="259" column="21" lean-forward="false" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -182,16 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data.json</find>
-      <find>exchange_rate</find>
-      <find>exchangerate</find>
-      <find>calc</find>
-      <find>initia</find>
-      <find>currency</find>
-      <find>new_</find>
-      <find>new_ex</find>
-      <find>.ew-mini-calculator .section .section-content</find>
-      <find>.ew-mini-calculator .calcinfo .price-container</find>
       <find>Order</find>
       <find>jayin</find>
       <find>initial</find>
@@ -211,7 +150,17 @@
       <find>form.sub</find>
       <find>paypal_email</find>
       <find>is_sandbox</find>
+      <find>order_date</find>
+      <find>ew_post_meta_boxes_setup</find>
+      <find>ew_add_post_meta_boxes</find>
+      <find>ew_order_fields_callback</find>
+      <find>coupon</find>
+      <find>check_c</find>
       <find>sandbox</find>
+      <find>ew_pricing</find>
+      <find>is_sab</find>
+      <find>alert</find>
+      <find>wp_mail</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\hztech\wp-content\plugins\ew-calculator</dir>
@@ -233,8 +182,8 @@
         <option value="$PROJECT_DIR$/assets/css/styles.css" />
         <option value="$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js" />
         <option value="$PROJECT_DIR$/shortcodes/ew-calculator.php" />
-        <option value="$PROJECT_DIR$/assets/js/prices.js" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/assets/js/prices.js" />
       </list>
     </option>
   </component>
@@ -400,58 +349,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ew-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hztech" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ew-calculator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shortcodes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ew-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hztech" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ew-calculator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -461,7 +358,7 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="add_unversioned_files" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Websites/Hztech/shipstation/shipstation" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -520,6 +417,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -553,12 +456,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496343573226</updated>
-      <workItem from="1496343575439" duration="42560000" />
+      <workItem from="1496343575439" duration="43853000" />
+      <workItem from="1499187986619" duration="4621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42560000" />
+    <option name="totallyTimeSpent" value="48474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -566,20 +470,20 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19912152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -616,6 +520,98 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ew_calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding>
+            <element signature="e#6#168#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8442">
+          <caret line="402" column="43" lean-forward="false" selection-start-line="402" selection-start-column="43" selection-end-line="402" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4137">
+          <caret line="197" column="77" lean-forward="false" selection-start-line="197" selection-start-column="77" selection-end-line="197" selection-end-column="77" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shortcodes/ew-calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25788">
+          <caret line="1228" column="73" lean-forward="false" selection-start-line="1228" selection-start-column="63" selection-end-line="1228" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shortcodes/ew-signin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/steps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2730">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding>
+            <marker date="1493932981445" expanded="true" signature="2833:2843" ph="..." />
+            <marker date="1493932981445" expanded="true" signature="3004:3015" ph="..." />
+            <marker date="1493932981445" expanded="true" signature="3151:3162" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5439">
+          <caret line="259" column="21" lean-forward="false" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8190">
+          <caret line="390" column="51" lean-forward="false" selection-start-line="390" selection-start-column="51" selection-end-line="390" selection-end-column="51" />
+          <folding>
+            <element signature="e#34035#34078#0#HTML" expanded="true" />
+            <marker date="1499192818666" expanded="true" signature="11046:11531" ph="..." />
+            <marker date="1499192818666" expanded="true" signature="32879:32916" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -628,14 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/EW_Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-356">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -654,21 +642,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="115" column="3" lean-forward="true" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/steps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="2730">
           <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding>
             <marker date="1493932981445" expanded="true" signature="2833:2843" ph="..." />
@@ -680,53 +659,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shortcodes/ew-signin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="21">
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding>
-            <element signature="e#746#752#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ew_calculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="27" column="62" lean-forward="true" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding>
-            <element signature="e#6#168#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="126">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="259" column="21" lean-forward="true" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
+        <state relative-caret-position="5439">
+          <caret line="259" column="21" lean-forward="false" selection-start-line="259" selection-start-column="21" selection-end-line="259" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../themes/twentysixteen/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
+        <state relative-caret-position="4137">
           <caret line="197" column="77" lean-forward="false" selection-start-line="197" selection-start-column="77" selection-end-line="197" selection-end-column="77" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -734,75 +691,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shortcodes/ew-mini-calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/EW_Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-596">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ew_calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#6#168#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shortcodes/ew-calculator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="1228" column="73" lean-forward="false" selection-start-line="1228" selection-start-column="63" selection-end-line="1228" selection-end-column="73" />
+        <state relative-caret-position="273">
+          <caret line="1240" column="67" lean-forward="false" selection-start-line="1240" selection-start-column="67" selection-end-line="1240" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/prices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="402" column="43" lean-forward="true" selection-start-line="402" selection-start-column="43" selection-end-line="402" selection-end-column="43" />
+        <state relative-caret-position="232">
+          <caret line="534" column="1" lean-forward="true" selection-start-line="534" selection-start-column="1" selection-end-line="534" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="396" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="891" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="739" column="23" lean-forward="true" selection-start-line="739" selection-start-column="23" selection-end-line="739" selection-end-column="23" />
           <folding>
-            <marker date="1496772418348" expanded="true" signature="11068:11306" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="16203:16283" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="16220:16283" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="17293:17617" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="17338:17453" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="17486:17617" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="17550:17617" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="18081:18405" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="18126:18241" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="18274:18405" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="18338:18405" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="18869:19212" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="18914:19043" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="19076:19212" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="19145:19212" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="19686:20030" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="19731:19872" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="19905:20030" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="20197:20548" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="20242:20383" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="20416:20548" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="20491:20548" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="20966:21741" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="21011:21160" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="21193:21741" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="21234:21598" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="21291:21555" ph="{...}" />
-            <marker date="1496772418348" expanded="true" signature="21372:21515" ph="{...}" />
-            <marker date="1496772418348" expanded="true" signature="21979:22641" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="21992:22441" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="21992:22641" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22447:22641" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22471:22543" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22555:22576" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22555:22641" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22745:22950" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22769:22847" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="22859:22950" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23123:23378" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23136:23378" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23160:23378" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23184:23274" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23286:23378" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23494:23701" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23518:23618" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="23630:23701" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="31954:32020" ph="..." />
-            <marker date="1496772418348" expanded="true" signature="33455:33521" ph="..." />
+            <element signature="e#34035#34078#0#HTML" expanded="true" />
+            <marker date="1499192818666" expanded="true" signature="11046:11531" ph="..." />
+            <marker date="1499192818666" expanded="true" signature="32879:32916" ph="..." />
           </folding>
         </state>
       </provider>
