@@ -228,7 +228,7 @@ function admin_order_columns_rendering( $column, $post_id )
 	switch ( $column ) {
 		case "order_date":
 			$order_date = $post->post_date;
-			echo date('j F Y H:s a', strtotime($order_date));
+			echo $order_date;
 
 			break;
 		case "status":
@@ -384,14 +384,39 @@ function ew_place_order()
 			"delivery_date"    => $req['deliverydate'],
 			"status"           => "in-progress",
 			"is_paid"          => "0",
-			"attachments"      => isset( $req['attachments'] ) ? $req['attachments'] : "",
-			"order_date"       => date( 'Y-m-d h:i a' )
+			"attachments"      => isset( $req['attachments'] ) ? $req['attachments'] : ""
 		);
+
+		$ew = get_option( 'ew' );
 
 		$order = new EW_Order();
 		$order->set_data( $args );
 
 		if ( $order->place() ) {
+
+			$order_id = $order->get_order_id();
+
+			$from          = get_bloginfo( 'admin_email' );
+			$admin_to      = isset( $ew["notification-email"] ) ? $ew["notification-email"] : get_bloginfo( 'admin_email' );
+			$admin_subject = get_bloginfo( 'name' ) . ' | New Order Received (UnPaid)';
+
+			$admin_message = '<h3>New Order Received (UnPaid)</h3>';
+
+			foreach ( $args as $k => $v ) {
+				if ( is_array( $v ) ) {
+					$v = $v['title'];
+				}
+				$admin_message .= '<p><strong>' . str_replace( "_", " ", ucwords( $k ) ) . ': </strong><span>' . $v . '</span></p>';
+			}
+			$admin_message .= '<p><a href="' . admin_url( "post.php?post=$order_id&action=edit" ) . '">View Order</a></p>';
+			$admin_message .= '<p><a href="' . admin_url( "edit.php?post_type=ew_order" ) . '">View All Orders</a></p>';
+
+			$headers = array();
+
+			$headers[] = 'From: ' . get_bloginfo( 'name' ) . ' <' . $from . '>';
+			$headers[] = 'Content-Type: text/html; charset=UTF-8';
+
+			wp_mail( $admin_to, $admin_subject, $admin_message, $headers );
 
 			$args["id"] = $order->get_order_id();
 
@@ -466,8 +491,9 @@ function calculator_options()
 	wp_enqueue_style( 'options-css', EW_URL . '/assets/css/options.css' );
 	$options = get_option( 'ew' );
 
-	$json = file_get_contents( dirname( __FILE__ ) . '/assets/data.json' );
-	$data = json_decode( $json, true );
+	$json  = file_get_contents( dirname( __FILE__ ) . '/assets/data.json' );
+	$data  = json_decode( $json, true );
+	$pages = get_posts( array( 'post_type' => 'page', 'nopaging' => 1 ) );
 	?>
     <div class="wrap" id="hz">
         <script>
@@ -484,7 +510,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[calc_page]">
-								<?php foreach ( get_posts( array( 'post_type' => 'page' ) ) as $page ) { ?>
+								<?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['calc_page'] ) && $options['calc_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -497,7 +523,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[signup_page]">
-								<?php foreach ( get_posts( array( 'post_type' => 'page' ) ) as $page ) { ?>
+	                            <?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['signup_page'] ) && $options['signup_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -510,7 +536,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[signin_page]">
-								<?php foreach ( get_posts( array( 'post_type' => 'page' ) ) as $page ) { ?>
+	                            <?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['signin_page'] ) && $options['signin_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -523,7 +549,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[after_login_page]">
-								<?php foreach ( get_posts( array( 'post_type' => 'page' ) ) as $page ) { ?>
+	                            <?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['after_login_page'] ) && $options['after_login_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -718,10 +744,10 @@ function ew_ipn_request()
 				$subject = get_bloginfo( 'name' ) . ' | Order confirmation';
 
 				$admin_to      = isset( $ew["notification-email"] ) ? $ew["notification-email"] : get_bloginfo( 'admin_email' );
-				$admin_subject = get_bloginfo( 'name' ) . ' | New Order Received';
+				$admin_subject = get_bloginfo( 'name' ) . ' | Order Paid';
 
 				$message       = '<h3>Order Confirmation</h3>';
-				$admin_message = '<h3>New Order Received</h3>';
+				$admin_message = '<h3>Order Paid Successfully</h3>';
 
 				$message .= '<p>' . $ew["order-confirmation-message"] . '</p>';
 				foreach ( $args as $k => $v ) {
@@ -730,7 +756,8 @@ function ew_ipn_request()
 					}
 					$admin_message .= '<p><strong>' . str_replace( "_", " ", ucwords( $k ) ) . ': </strong><span>' . $v . '</span></p>';
 				}
-				$admin_message .= '<p><a href="' . admin_url( "edit.php?post_type=ew_order" ) . '">View Orders</a></p>';
+				$admin_message .= '<p><a href="' . admin_url( "post.php?post=$order_id&action=edit" ) . '">View Order</a></p>';
+				$admin_message .= '<p><a href="' . admin_url( "edit.php?post_type=ew_order" ) . '">View All Orders</a></p>';
 
 				$headers = array();
 
@@ -885,7 +912,7 @@ function ew_order_fields_callback( $obj, $box )
 		"attachments" => array( "input" => "textarea" )
 	);
 
-	echo '<h1 style="font-size: 50px; line-height: normal;">Order ID#'.$obj->ID.'</h1><h3>Order Summary:</h3>';
+	echo '<h1 style="font-size: 50px; line-height: normal;">Order ID#' . $obj->ID . '</h1><h3>Order Summary:</h3>';
 
 	foreach ( $fields as $field => $type ) {
 
@@ -940,7 +967,8 @@ function ew_order_fields_callback( $obj, $box )
 		}
 		?>
         <p>
-            <label for="ew-post-metas" style="margin-bottom: 5px; display: block;"><strong><?php echo ucwords( __( str_replace( '_', ' ', $field ), 'ew' ) ); ?></strong></label>
+            <label for="ew-post-metas"
+                   style="margin-bottom: 5px; display: block;"><strong><?php echo ucwords( __( str_replace( '_', ' ', $field ), 'ew' ) ); ?></strong></label>
 			<?php if ( $input_type == "text" ) { ?>
                 <input class="widefat" type="text" name="ew[<?php echo $field; ?>]" id="ew-<?php echo $field; ?>"
                        value="<?php echo $val; ?>"/>
