@@ -540,7 +540,7 @@ function payment() {
             } else {
                 var msg = "Order request failed, please try again later";
 
-                if(typeof e.message !== "undefined")
+                if (typeof e.message !== "undefined")
                     msg = e.message;
 
                 showErrorMessage(msg);
@@ -809,6 +809,8 @@ function doprices() {
     p = exchangerate(p);
     setprice(p, prev);
     calcdate();
+
+    return [p, prev];
 }
 function calcdebug(t) {
     if (typeof(console) == 'object' && typeof(console.log) == 'function')
@@ -858,6 +860,8 @@ function setprice(p, prev) {
     jQuery('.amount').text(number_format(p, 2));
 
     totalPrice = p;
+
+    return p;
 }
 Date.prototype.addDate = function (x) {
     this.setDate(this.getDate() + x);
@@ -978,6 +982,8 @@ function calcdate(testdate) {
     var newdate = d.time + ' on ' + f + ' ' + mon[n.getMonth()] + ' ' + n.getFullYear();
     jQuery('.calcdate').text(newdate);
     calcform.deliverydate.value = newdate;
+
+    return newdate;
 }
 function mindate() {
     if (typeof(calc.selected) == 'undefined' || typeof(calc.selected[5]) == 'undefined')
