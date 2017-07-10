@@ -1,10 +1,18 @@
 <?php
 
+if ( ! session_id() ) {
+	session_start();
+}
+
 function ew_authorization()
 {
 	global $post;
 
 	$options = get_option( 'ew' );
+
+	if ( isset( $_POST['nonce'] ) && wp_verify_nonce( $_POST['nonce'], EW_Order::NONCE ) ) {
+		$_SESSION['has_chosen'] = true;
+	}
 
 	if ( is_user_logged_in() ) {
 		if ( ( isset( $options['signup_page'] ) && $post->ID == $options['signup_page'] ) || isset( $options['signin_page'] ) && $post->ID == $options['signin_page'] ) {
@@ -28,12 +36,43 @@ function ew_authorization()
 
 }
 
+function ew_signup_confirmation_request()
+{
+	if ( isset( $_GET['e'] ) && isset( $_GET['token'] ) ) {
+		$options = get_option( 'ew' );
+
+		$email = $_GET['e'];
+		$token = $_GET['token'];
+
+		$users = get_users( array(
+			                    'meta_key'     => 'token',
+			                    'meta_value'   => $token,
+			                    'meta_compare' => '='
+		                    ) );
+		if ( $users ) {
+			foreach ( $users as $user ) {
+				if ( $user->user_email === $email ) {
+					update_user_meta( $user->ID, 'confirmed', 1 );
+					break;
+				}
+			}
+		}
+
+		$redirectUrl = ! empty( $options['signin_page'] ) ? get_permalink( $options['signin_page'] ) : get_bloginfo( 'url' );
+		wp_redirect( $redirectUrl );
+		exit;
+	}
+}
+
 function ew_signup_request()
 {
 	if ( isset( $_POST['nonce'] ) && wp_verify_nonce( $_POST['nonce'], EW_User::SIGNUP_NONCE ) ) {
 		$options = get_option( 'ew' );
 
-		$isLoggedIn  = EW_User::doSignup( $_POST['email'], $_POST['password'], isset( $_POST['remember_me'] ) );
+		$isLoggedIn  = EW_User::doSignup( $_POST['email'], $_POST['password'], isset( $_POST['remember_me'] ), true, array(
+			'first_name' => ( isset( $_POST['first_name'] ) ? $_POST['first_name'] : "" ),
+			'phone'      => ( isset( $_POST['phone'] ) ? $_POST['phone'] : "" )
+		) );
 		$redirectUrl = ! empty( $_GET['redirect'] ) ? $_GET['redirect'] : "";
 		$afterLogin  = ! empty( $options['after_login_page'] ) ? get_permalink( $options['after_login_page'] ) : $redirectUrl;
 
@@ -42,8 +81,10 @@ function ew_signup_request()
 		}
 
 		if ( $isLoggedIn['status'] == true ) {
-			wp_redirect( $afterLogin );
-			exit;
+			//wp_redirect( $afterLogin );
+			add_action( 'ew_login_success_messages', function () use ( &$isLoggedIn ) {
+				echo apply_filters( 'ew_success_message', $isLoggedIn['message'] );
+			} );
 		} else {
 			add_action( 'ew_login_error_messages', function () use ( &$isLoggedIn ) {
 				echo apply_filters( 'ew_error_message', $isLoggedIn['message'] );
@@ -170,6 +211,19 @@ function render_ew_mini_calculator()
 function render_ew_calculator()
 {
 	ob_start();
+
+	$user  = null;
+	$email = null;
+	$name  = null;
+	$phone = null;
+
+	if ( is_user_logged_in() ) {
+		$user = wp_get_current_user();
+
+		$email = $user->user_email;
+		$phone = get_user_meta( $user->ID, 'phone', true );
+		$name  = get_user_meta( $user->ID, 'first_name', true );
+	}
 
 	// INCLUDE SCRIPTS
 	//wp_enqueue_script( 'track', plugins_url( '/assets/js/track.js' , __FILE__ ), array( 'jquery' ) );
@@ -346,6 +400,23 @@ function ew_save_options()
 function ew_place_order()
 {
 	if ( isset( $_REQUEST['nonce'] ) && wp_verify_nonce( $_REQUEST['nonce'], EW_Order::NONCE ) ) {
+		$user      = wp_get_current_user();
+		$confirmed = get_user_meta( $user->ID, 'confirmed', true );
+
+		if ( ! $confirmed ) {
+			$email            = $user->user_email;
+			$token            = get_user_meta( $user->ID, 'token', true );
+			$confirmation_url = add_query_arg( array(
+				                                   'e'     => $email,
+				                                   'token' => $token
+			                                   ), get_bloginfo( 'url' ) );
+			echo json_encode( array(
+				                  "status"  => false,
+				                  "message" => 'Please confirm your email address to place an order. <a href="#" target="_blank" onclick="javascript:resendConfirmation(\'' . base64_encode( $confirmation_url ) . '\'); return false;" id="resend-confirmation-link">Resend confirmation link</a>'
+			                  ) );
+			die();
+		}
+
 		$json = file_get_contents( dirname( __FILE__ ) . '/assets/data.json' );
 		$data = json_decode( $json, true );
 
@@ -420,6 +491,8 @@ function ew_place_order()
 
 			$args["id"] = $order->get_order_id();
 
+			unset( $_SESSION['has_chosen'] );
+
 			echo json_encode( array(
 				                  "status"   => true,
 				                  "order_id" => $order->get_order_id(),
@@ -435,31 +508,65 @@ function ew_place_order()
 	die();
 }
 
+function ew_resend_confirmation()
+{
+	if ( isset( $_REQUEST['url'] ) ) {
+		$confirmation_url = base64_decode( $_REQUEST['url'] );
+
+		$user    = wp_get_current_user();
+		$from    = get_bloginfo( 'admin_email' );
+		$subject = get_bloginfo( 'name' ) . ' | Registration confirmation';
+
+		$message = '<h2 style="text-align: center;">' . get_bloginfo( 'name' ) . '</h2>';
+		$message .= '<a href="' . $confirmation_url . '">' . $confirmation_url . '</a>';
+
+		$headers = array();
+
+		$headers[] = 'From: ' . get_bloginfo( 'name' ) . ' <' . $from . '>';
+		$headers[] = 'Content-Type: text/html; charset=UTF-8';
+
+		wp_mail( $user->user_email, $subject, $message, $headers );
+
+		echo json_encode( array(
+			                  "status"  => true,
+			                  "message" => 'Confirmation link sent successfully'// . $confirmation_url
+		                  ) );
+	}
+	die();
+}
+
 function ew_pricing()
 {
 	if ( isset( $_REQUEST['nonce'] ) && wp_verify_nonce( $_REQUEST['nonce'], EW_Order::NONCE ) ) {
-		$json    = file_get_contents( dirname( __FILE__ ) . '/assets/data.json' );
-		$options = get_option( 'ew' );
-
-		$config = json_decode( $json, true );
-
-		$config["return_url"]   = isset( $options["after-payment-url"] ) ? add_query_arg( array( "confirm" => "" ), $options["after-payment-url"] ) : add_query_arg( array( "confirm" => "" ), get_bloginfo( 'url' ) );
-		$config["notify_url"]   = isset( $options["after-payment-url"] ) ? add_query_arg( array( "notify" => "" ), $options["after-payment-url"] ) : add_query_arg( array( "notify" => "" ), get_bloginfo( 'url' ) );
-		$config["paypal_email"] = isset( $options["paypal_email"] ) ? $options['paypal_email'] : '';
-		$config["is_sandbox"]   = isset( $options["is_sandbox"] );
-
-		$config["upload_url"] = add_query_arg( array( "upload_file" => "" ), get_bloginfo( "url" ) );
-		$config["currency"]   = isset( $options["currency"] ) ? $options["currency"] : 'GBP';
-
-		if ( ! empty( $options["exchange_rate"] ) ) {
-			$config["exchange"][ $config["currency"] ] = $options["exchange_rate"];
-		}
-
-		$json = json_encode( $config );
-
-		echo $json;
+		options_json();
 	}
 	die();
+}
+
+function options_json()
+{
+	$json    = file_get_contents( dirname( __FILE__ ) . '/assets/data.json' );
+	$options = get_option( 'ew' );
+
+	$config = json_decode( $json, true );
+
+	$config["return_url"]      = isset( $options["after-payment-url"] ) ? add_query_arg( array( "confirm" => "" ), $options["after-payment-url"] ) : add_query_arg( array( "confirm" => "" ), get_bloginfo( 'url' ) );
+	$config["notify_url"]      = isset( $options["after-payment-url"] ) ? add_query_arg( array( "notify" => "" ), $options["after-payment-url"] ) : add_query_arg( array( "notify" => "" ), get_bloginfo( 'url' ) );
+	$config["paypal_email"]    = isset( $options["paypal_email"] ) ? $options['paypal_email'] : '';
+	$config["is_sandbox"]      = isset( $options["is_sandbox"] );
+	$config["upload_url"]      = add_query_arg( array( "upload_file" => "" ), get_bloginfo( "url" ) );
+	$config["currency"]        = isset( $options["currency"] ) ? $options["currency"] : 'GBP';
+	$config["advanced_fields"] = isset( $options["advanced_fields"] );
+	$config["is_logged_in"]    = is_user_logged_in();
+	$config["has_chosen"]      = isset( $_SESSION['has_chosen'] );
+
+	if ( ! empty( $options["exchange_rate"] ) ) {
+		$config["exchange"][ $config["currency"] ] = $options["exchange_rate"];
+	}
+
+	$json = json_encode( $config );
+
+	echo $json;
 }
 
 function check_coupon()
@@ -523,7 +630,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[signup_page]">
-	                            <?php foreach ( $pages as $page ) { ?>
+								<?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['signup_page'] ) && $options['signup_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -536,7 +643,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[signin_page]">
-	                            <?php foreach ( $pages as $page ) { ?>
+								<?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['signin_page'] ) && $options['signin_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -549,7 +656,7 @@ function calculator_options()
                         </th>
                         <td>
                             <select name="ew[after_login_page]">
-	                            <?php foreach ( $pages as $page ) { ?>
+								<?php foreach ( $pages as $page ) { ?>
                                     <option<?php echo( ( isset( $options['after_login_page'] ) && $options['after_login_page'] == $page->ID ) ? " selected" : "" ); ?>
                                             value="<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></option>
 								<?php } ?>
@@ -595,6 +702,20 @@ function calculator_options()
                             </script>
                             <input id="exchange_rate" type="number" step="any" name="ew[exchange_rate]"
                                    value="<?php echo( isset( $options['exchange_rate'] ) ? $options['exchange_rate'] : "" ); ?>"/>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Steps/Fields Settings</h3>
+                <table class="form-table">
+                    <tbody>
+                    <tr valign="top">
+                        <th scope="row">
+                            <label for="ew[advanced_fields]">Advanced Fields</label>
+                        </th>
+                        <td>
+                            <input type="checkbox" name="ew[advanced_fields]"
+                                   value="1"<?php echo( isset( $options['advanced_fields'] ) ? ' checked="checked"' : '' ); ?> />
                         </td>
                     </tr>
                     </tbody>
@@ -1036,4 +1157,19 @@ function ew_coupon_fields_callback( $obj, $box )
         </p>
 		<?php
 	}
+}
+
+function render_ew_admin_bar()
+{
+	$user = wp_get_current_user();
+	if ( user_can( $user->ID, 'manage_options' ) ) {
+		return true;
+	}
+
+	return false;
+}
+
+function footer_scripts()
+{
+
 }

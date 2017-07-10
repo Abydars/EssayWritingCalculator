@@ -1,5 +1,6 @@
 <div id="mini-calccontparent" class="ew-mini-calculator">
 	<script>
+        var calc = <?php options_json(); ?>;
 		var ajx = "<?php echo admin_url('admin-ajax.php'); ?>";
 	</script>
 	<noscript>You need JavaScript enabled to be able to complete this form.</noscript>

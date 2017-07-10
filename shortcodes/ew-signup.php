@@ -1,9 +1,18 @@
 <div id="mini-calccontparent">
     <form method="POST">
         <?php do_action('ew_login_error_messages'); ?>
+        <?php do_action('ew_login_success_messages'); ?>
         <div class="form-group">
             <label>Email Address</label>
             <input type="email" name="email" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="text" name="phone" class="form-control" />
         </div>
         <div class="form-group">
             <label>Password</label>

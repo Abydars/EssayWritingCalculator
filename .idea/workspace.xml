@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/ew_calculator.php" line="39" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1e95d2-4b9a-4090-8d04-5b7cedd489b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-    </list>
+    <list default="true" id="da1e95d2-4b9a-4090-8d04-5b7cedd489b2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +30,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="646" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1038" selection-end-column="1" />
+            <state relative-caret-position="282">
+              <caret line="634" column="42" lean-forward="true" selection-start-line="634" selection-start-column="42" selection-end-line="634" selection-end-column="42" />
               <folding>
                 <element signature="n#ew_pricing#0;n#!!top" expanded="false" />
                 <element signature="n#check_coupon#0;n#!!top" expanded="false" />
@@ -387,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54363000" />
+    <option name="totallyTimeSpent" value="55582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -868,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="646" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1038" selection-end-column="1" />
+        <state relative-caret-position="282">
+          <caret line="634" column="42" lean-forward="true" selection-start-line="634" selection-start-column="42" selection-end-line="634" selection-end-column="42" />
           <folding>
             <element signature="n#ew_pricing#0;n#!!top" expanded="false" />
             <element signature="n#check_coupon#0;n#!!top" expanded="false" />
