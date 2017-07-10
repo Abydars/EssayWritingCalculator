@@ -200,6 +200,8 @@ function render_ew_mini_calculator()
 
 	$options = get_option( 'ew' );
 
+	$advanced = isset( $options['advanced_fields'] );
+
 	include_once( 'shortcodes/ew-mini-calculator.php' );
 	$contents = ob_get_contents();
 

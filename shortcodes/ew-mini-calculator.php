@@ -1,4 +1,4 @@
-<div id="mini-calccontparent" class="ew-mini-calculator">
+<div id="mini-calccontparent" class="ew-mini-calculator<?php echo ($advanced ? ' advanced' : ''); ?>">
 	<script>
         var calc = <?php options_json(); ?>;
 		var ajx = "<?php echo admin_url('admin-ajax.php'); ?>";

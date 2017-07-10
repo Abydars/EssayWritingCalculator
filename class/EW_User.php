@@ -59,6 +59,10 @@ class EW_User
 					'message' => $user->get_error_message()
 				);
 			}
+
+			return array(
+				'status' => true
+			);
 		}
 
 		$token            = rand( 111111, 999999999 );

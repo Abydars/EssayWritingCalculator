@@ -272,6 +272,14 @@ input.required.invalid {
 .ew-mini-calculator .loading input[type=submit]{
     display: none;
 }
+.ew-mini-calculator #ob3,
+.ew-mini-calculator #ob6 {
+    display: none !important;
+}
+.ew-mini-calculator.advanced #ob3,
+.ew-mini-calculator.advanced #ob6 {
+    display: block !important;
+}
 
 @media screen and (max-width: 480px) {
     #allsteps {
